@@ -12,7 +12,9 @@ export default function Shell({ role, tab, name, ok, err, children }: {
     <div className="app">
       <input type="checkbox" id="menu" hidden />
       <aside className="sidebar" id="sidebar">
-        <div className="brand"><div className="brand-logo">✚</div><div><strong>LONGEVIA</strong><small>PERSONALIZED HEALTH</small></div></div>
+        <div className="brand"><div className="brand-logo">✚</div><div><strong>LONGEVIA</strong><small>PERSONALIZED HEALTH</small></div>
+          <label htmlFor="menu" className="sidebar-close" aria-label="Close menu">✕</label>
+        </div>
         <div className="nav-label">CARE PLATFORM</div>
         <nav className="nav">
           {menu.map(([id, label]) => (
@@ -32,6 +34,7 @@ export default function Shell({ role, tab, name, ok, err, children }: {
           </div>
         </div>
       </aside>
+      <label htmlFor="menu" className="sidebar-backdrop" aria-hidden="true" />
       <main className="main">
         <header className="topbar">
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>

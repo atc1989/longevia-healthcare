@@ -21,3 +21,8 @@ form.inline{display:inline}
 .nav a.active,.nav a:hover{color:#fff;background:#285846}
 @media(max-width:760px){.mobile-menu{display:block}#menu:checked~.sidebar{transform:translateX(0)}}
 a.pill{display:inline-block}a.linkbtn{font-size:12px;font-weight:800;color:#2c7757}
+.sidebar-close,.sidebar-backdrop{display:none}
+@media(max-width:760px){
+.sidebar-close{display:grid;place-items:center;margin-left:auto;width:34px;height:34px;border-radius:10px;background:rgba(255,255,255,.12);color:#fff;cursor:pointer}
+#menu:checked~.sidebar-backdrop{display:block;position:fixed;inset:0;z-index:4;background:rgba(0,0,0,.4)}
+}
